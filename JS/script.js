@@ -14,15 +14,15 @@ btn_hamburger.addEventListener ("click",function (e) {
         img_hamburger.src = "./images/icon-hamburger.svg";
     }
 
-    all_imgArrowDown.forEach (el => {
-        if (el.src.includes("icon-arrow-light.svg")) {
-            el.src = "./images/icon-arrow-dark.svg";
-        } else {
-            el.src = "./images/icon-arrow-light.svg";
-        }
-    })
 })
 
+all_imgArrowDown.forEach (el => {
+    if (el.src.includes("icon-arrow-light.svg")) {
+        el.src = "./images/icon-arrow-dark.svg";
+    } else {
+        el.src = "./images/icon-arrow-light.svg";
+    }
+})
 
 all_linkNav.forEach(el => {
     el.addEventListener ("click",() => {
