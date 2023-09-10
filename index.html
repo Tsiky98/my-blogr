@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  <link rel="stylesheet" href="./CSS/style.css">
+  <script src="./JS/script.js" defer></script>
+  <title>Blogr</title>
+
+</head>
+<body>
+  
+  <header>
+      <nav>
+          <div class="logo-nav">
+              <img src="./images/logo.svg" alt="icone de logo">
+          </div>
+          <ul class="list-nav">
+              <li class="item-nav">
+                    <a href="#">Product</a>
+                    <span class="arrow-down">
+                       <img src="./images/icon-arrow-light.svg" alt="">
+                    </span>
+              </li>
+              <li class="item-nav">
+                    <a href="#">Company</a>
+                    <span class="arrow-down">
+                       <img src="./images/icon-arrow-light.svg" alt="">
+                    </span>
+              </li>
+
+              <li class="item-nav connect">
+                    <div class="bloc-link-arrow">
+                      <a href="#">Connect</a>
+                      <span class="arrow-down">
+                         <img src="./images/icon-arrow-light.svg" alt="">
+                      </span>
+                    </div>
+                    <ul class="dropdown">
+                        <li class="item-dropdown"><a href="#">Contact</a></li>
+                        <li class="item-dropdown"><a href="#">Newsletter</a></li>
+                        <li class="item-dropdown"><a href="#">Linkedin</a></li>
+                    </ul>
+              </li>
+
+              <li class="item-nav login">
+                  <a href="#">Login</a>
+              </li>
+
+              <li class="item-nav sign-up">
+                  <a href="#" class="btn btn-sign-up">Sign Up</a>
+              </li>
+
+          </ul>
+
+          <div class="hamburger">
+              <img src="./images/icon-hamburger.svg" alt="icone hamburger">
+          </div>
+      </nav> 
+
+      <div class="content-header">
+          <h1 class="titre titre-header">
+              A modern publishing platform
+          </h1>
+          <p class="txt txt-header">
+              Ground your audience and build your own brand
+          </p>
+
+          <div class="container-btn">
+              <a href="#" class="btn btn-start">Start for Free</a>
+              <a href="#" class="btn btn-learn">Learn More</a>
+          </div>
+      </div>
+
+  </header>
+
+  <h2 class="titre titre-main">Designed for the future</h2>
+  
+  <section class="main">
+        <div class="bloc-txt">
+                <div class="bloc-txt-1">
+                    <h3 class="titre-txt-1">Introducing an extensible editor</h3>
+                    <p class="txt-1">
+                        Blogr features and exceedingly intuitive interface wich lets
+                        you focus on one thing: Creating content. The editor supports
+                        management of mutliple blogs and allows easy manipulations of embeds 
+                        such as images, videos, and Markdown. Extensibly with plugins and theme 
+                        provide easy ways to add functionnality of change the looks of a blog. 
+                    </p>
+                </div>
+                <div class="bloc-txt-2">
+                    <h3 class="titre-txt-2">Robust content management</h3>
+                    <p class="txt-2">
+                        Flexible content management enables users to easily move through 
+                        posts. Increase the usability of your blog by adding customised
+                        categories, sections, format, or flow. With this functionnality,
+                        you're in full control.
+                    </p>
+                </div>
+        </div>
+        <div class="bloc-img">
+            <img 
+             srcset="
+             ./images/illustration-editor-mobile.svg 700w
+             "
+             sizes= "
+              (max-width:700px) 400px,
+             "
+             src="./images/illustration-editor-desktop.svg" 
+             alt="illustration editor"
+            >
+        </div>
+  </section>
+
+  <section class="main-1">
+    <div class="bloc-phone">
+        <img 
+        src="./images/illustration-phones.svg" 
+
+        alt="illustration phone" 
+
+        sizes="
+         (max-width:700px) 700px,
+        " 
+        srcset="
+          ./images/illustration-phones.svg 1440w,
+        "
+        >
+    </div>
+
+    <div class="bloc-structure">
+        <h3 class="titre-structure">
+            State of the Art Infrastructure
+        </h3>
+        <p class="txt-structure">
+            With reliability and speed in mind, worldwide data centers provide
+            the backbone for ultra-fast connectivity. This is ensures your site 
+            will load instantly, no matter where your readers are, keeping your site
+            competitive.
+        </p>
+    </div>
+
+  </section>
+
+  <section class="main-2">
+    <div class="bloc-laptop">
+        <img 
+
+         src="./images/illustration-laptop-desktop.svg"
+         alt="illustration laptop" 
+         srcset="
+         ./images/illustration-laptop-mobile.svg 700w,
+         "
+         sizes="
+          (max-width:700px) 400px,
+         "
+         >
+
+    </div>
+
+    <div class="bloc-txt-laptop">
+        <div class="txt-laptop-1">
+            <h3 class="titre-laptop">
+                Free, open, simple
+            </h3>
+            <p class="txt-laptop">
+                Blogr is a free and open source application backed by a large
+                community of helpful developers. It supports features such as a
+                code syntax highlighting, RSS feeds, social media integration,
+                third-party commenting tools, and works seamlessly with Google
+                Analytics.The architecture is clean and is relatively easy to learn.
+            </p>
+        </div>
+        <div class="txt-laptop-2">
+            <h3 class="titre-laptop">
+                Powerful tooling
+            </h3>
+            <p class="txt-laptop">
+                Batteries included.We built a simple and straightforward CLI tool 
+                that makes customization and deployment a breeze, but capable of 
+                producing even the most complicated sites.
+            </p>
+        </div>
+    </div>
+
+  </section>
+
+  <!-- Footer section -->
+  <footer>
+     <div class="content-footer">
+        
+        <div class="logo-site">
+            <img src="./images/logo.svg" alt="logo site">
+        </div>
+
+        <ul class="list-link">
+            <h4 class="titre-link">Product</h4>
+            <li class="item-link"><a href="#">Overview</a></li>
+            <li class="item-link"><a href="#">Pricing</a></li>
+            <li class="item-link"><a href="#">Marketplace</a></li>
+            <li class="item-link"><a href="#">Features</a></li>
+            <li class="item-link"><a href="#">Integrations</a></li>
+        </ul>
+
+        <ul class="list-link">
+            <h4 class="titre-link">Company</h4>
+            <li class="item-link"><a href="#">About</a></li>
+            <li class="item-link"><a href="#">Team</a></li>
+            <li class="item-link"><a href="#">Blog</a></li>
+            <li class="item-link"><a href="#">Careers</a></li>
+        </ul>
+
+        <ul class="list-link">
+            <h4 class="titre-link">Connect</h4>
+            <li class="item-link"><a href="#">Contact</a></li>
+            <li class="item-link"><a href="#">Newsletter</a></li>
+            <li class="item-link"><a href="#">Linkedin</a></li>
+            <p class="item-link last">Made by Tsiky Randriam</p>
+        </ul>
+     </div>
+
+  </footer>
+
+</body>
+</html>

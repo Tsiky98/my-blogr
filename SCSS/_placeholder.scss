@@ -1,0 +1,47 @@
+%flex-center {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+%flex-centerY {
+    display: flex;
+    justify-content: center;
+    flex-flow: column;
+    align-items: center;
+}
+
+
+%titre {
+    font-size: $big-title;
+    text-align: center;
+    padding-bottom: 15px;
+    color: $white;
+    
+}
+
+%txt {
+    font-size: 18px;
+    color: $white;
+    text-align: center;
+    font-family: Roboto,sans-serif;
+    letter-spacing: 1px;
+}
+
+%btn {
+    padding: 12px 17px;
+    text-align: center;
+    border-radius: 9999px;
+    font-size: 16px;
+    background-color: transparent;
+    border: 1px solid $white;
+    outline: none;
+    color: $white;
+
+    &:hover {
+        background: $bgc-btn;
+        color: $white;
+        border: 1px solid transparent;
+    }
+}
+

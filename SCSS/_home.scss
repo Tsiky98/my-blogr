@@ -1,0 +1,395 @@
+header {
+    padding: 40px 0px 0px;
+    position: relative;
+    width: 100%;
+    height: 600px;
+    background: linear-gradient(to right,$bgc-header-left,10%,$bgc-header-right);
+    border-bottom-left-radius: 60px;
+    overflow: hidden;
+    margin-bottom: 50px;
+}
+
+.content-header {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    display: flex;
+    flex-flow: column;
+    justify-content: center;
+    align-items: center;
+    background: url("../images/bg-pattern-intro-desktop.svg") no-repeat 25% 52%;
+    border-bottom-left-radius: 60px;
+
+}
+
+
+.container-btn {
+    margin: 0 auto;
+    height: auto;
+    @extend %flex-center;
+
+    .btn {
+        @extend %btn;
+        text-decoration: none;
+        margin: 0px 10px;
+        font-size: 17px;
+        font-weight: 550;
+    }
+
+    .btn-start {
+        background-color: $white;
+        color: $bgc-header-right;
+    }
+
+    .btn-learn:hover {
+        background: $white;
+        color: $bgc-header-right;
+    }
+}
+
+.titre-header {
+    @extend %titre;
+}
+
+.txt-header {
+    @extend %txt;
+    margin-bottom: 30px;
+}
+
+
+nav {
+    width: 70%;
+    height: 70px;
+    padding: 0px 30px;
+    margin: 0 auto;
+    position: relative;
+    z-index: 2000;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+nav .hamburger {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+
+nav .hamburger {
+    right: 10px;
+    cursor: pointer;
+    display: none;
+}
+
+
+.list-nav {
+    width: 98%;
+    height: 100%;
+    margin-left: 25px;
+    list-style: none;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    flex-shrink: 0;
+}
+
+.item-nav {
+    margin: 0px 10px;
+}
+
+.item-nav a {
+    font-size: 18px;
+    color: $white;
+    font-weight: 560;
+    text-decoration: none;
+    position: relative;
+    text-align: center;
+}
+
+.item-nav a:after {
+    position: absolute;
+    bottom: -2px;
+    display: block;
+    content: "";
+    height: 2px;
+    background: $white;
+    width: 0%;
+    transition: width 0.3s ease-in;
+}
+
+.item-nav a:hover::after {
+    width: 100%;
+}
+
+.item-nav:nth-child(4) a:hover::after, .item-nav:nth-child(5) a:hover::after {
+    width: 0%;
+}
+
+.item-nav.connect {
+    display: flex;
+    flex-flow: column;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    top: 6px;
+    padding-bottom: 6px;
+    // top: 60px;
+
+    & .dropdown {
+        position: absolute;
+        top: 30px;
+        background-color: $white;
+        list-style: none;
+        padding: 12px 25px;
+        border-radius: 5px;
+        box-shadow: 0px 3px 5px rgba(0,0,0,0.5);
+        display: none;
+
+        &:hover {
+            display: block;
+        }
+    }
+    
+    .item-dropdown {
+        padding: 5px 0px;
+    }
+
+    .item-dropdown a {
+        color: #000;
+        opacity: 0.7;
+        font-size: 16px;
+
+        &:hover {
+            opacity: 1;
+        }
+    }
+}
+
+.item-nav.connect:hover .dropdown {
+    display: block;
+}
+
+.item-nav.sign-up  {
+    margin-left: 20px;
+}
+
+.item-nav.sign-up .btn {
+    @extend %btn;
+    padding: 8px 17px;
+    border: 1px solid transparent;
+    background: $white;
+    color: $bgc-header-right;
+}
+
+.item-nav .arrow-down {
+    margin: 0 5px;
+}
+
+.item-nav.login {
+    margin-left: auto;
+}
+
+
+
+//  RESPONSIVE HEADER
+@media screen and (max-width:1230px) {
+    .content-header {
+        background-position: 28% 53%;
+    }
+}
+
+
+@media screen and (max-width:1168px) {
+    .content-header {
+        background-position: 30% 53%;
+    }
+}
+
+
+@media screen and (max-width:1106px) {
+    .content-header {
+        background-position: 33% 52%;
+    }
+}
+
+
+@media screen and (max-width:950px) {
+    .content-header {
+        background-position: 39% 52%;
+    }
+}
+
+
+//  Responsive Navigation
+@media screen and (max-width:920px) {
+   header {
+        overflow: visible;
+   }
+
+    .content-header {
+        background-position:49% 49%;
+    }
+
+    nav {
+        flex-flow: column; 
+        align-items: flex-start;
+    }
+
+    nav .logo-nav {
+        position: relative;
+        top: 17px;
+    }
+
+    nav .hamburger {
+        display: block;
+    }
+
+    
+    .list-nav {
+        margin: 28px auto;
+        width: 80%;
+        max-width: 320px;
+        min-width: 280px;
+        height: auto;
+        flex-flow: column;
+        align-items: center;
+        background:$white;
+        padding-bottom: 15px;
+        border-radius: 5px;
+        box-shadow: 0px 5px 10px rgba(0,0,0,0.5);
+        display: none;
+    }
+
+    .list-nav.active {
+        display: flex;
+    }
+    
+    .item-nav:nth-child(1) {
+        padding-top: 20px;
+    }
+
+    .item-nav {
+       padding: 18px 0px;
+       width: 80%;
+       margin: 0 auto;
+       text-align: center;
+    }
+
+    .item-nav a {
+        color: #333;
+    }
+
+    .item-nav a:after {
+        background-color: #333;
+        left: 50%;
+        transform: translateX(-50%);
+    }
+
+    .item-nav.connect {
+        top: 0px;
+        padding-bottom: 10px;
+        border-bottom: 1px solid rgba(0,0,0,0.5);
+        height: auto;
+
+        .dropdown {
+          position: relative;
+          top: 0;
+          width: 100%;
+          margin: 10px 0px 0px;
+          display: block;
+          background: $white;
+        }
+    }
+
+
+    .item-nav.login,.item-nav.sign-up {
+        margin: 0 auto;
+    }
+
+    .item-nav.sign-up .btn {
+        background-color: $bgc-header-right;
+        color: $white;
+    }
+
+}
+
+
+@media screen and (max-width:730px) {
+    .content-header .titre-header {
+        font-size: 40px;
+    }
+}
+
+@media screen and (max-width:620px) {
+    nav {
+        width: 90%;
+    }
+
+    .content-header .titre-header {
+        font-size: 33px;
+    }
+}
+
+@media screen and (max-width:550px) {
+
+    header {
+        padding: 35px 0px 0px;
+        height: 480px;
+    }
+
+    .content-header .titre-header {
+        width:80%;
+        font-size: 30px;
+    }
+
+    .content-header .txt-header {
+        width: 80%;
+        line-height: 1.6;
+        font-size: 16px;
+        margin-bottom: 35px;
+    }
+
+    .container-btn .btn {
+        padding: 8px 12px;
+        font-size: 14px;
+    }
+    
+}
+
+@media screen and (max-width:450px) {
+
+    .content-header {
+        background-image: url("../images/bg-pattern-intro-mobile.svg");
+        border-bottom-left-radius: 60px;
+    }
+
+    .content-header .titre-header {
+        margin-top: 50px;
+    }
+
+    nav {
+        width: 98%;
+    }
+
+}
+
+
+@media screen and (max-width:370px) {
+    nav {
+        padding: 0px 10px;
+    }
+
+    .content-header {
+        height: 100%;
+        background-position: 41.5% 33%;
+    }
+
+    .content-header .titre-header {
+        font-size: 25px;
+        width: 100%;
+
+    }
+}
